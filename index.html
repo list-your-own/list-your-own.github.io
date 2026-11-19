@@ -597,7 +597,7 @@
           <div class="step">
             <div class="num">1</div>
             <h3>Fill out the form</h3>
-            <p><a href="#contact-form">Use the form on this page</a>, call or text (779) 800-9303, or send us a DM. Just drop your mobile number — anywhere in the U.S. — and we'll text you back.</p>
+            <p><a href="#contact-form">Use the form on this page</a>, call or text (779) 800-9303, or send us a DM. Just drop your email — anywhere in the U.S. — and we'll email you back.</p>
           </div>
           <div class="step">
             <div class="num">2</div>
@@ -648,11 +648,11 @@
           </details>
           <details>
             <summary>Where do you list homes?</summary>
-            <p>Nationwide — we'll list any property anywhere in the United States for the same tiered listing fee — 1% on homes up to $1,000,000 and 1.5% on homes over $1,000,000. We're based in Schaumburg, Illinois, but the listing itself goes on your local MLS and out to the major sites either way. Leave your mobile number in the form on this page and we'll confirm the listing details for your market before you sign.</p>
+            <p>Nationwide — we'll list any property anywhere in the United States for the same tiered listing fee — 1% on homes up to $1,000,000 and 1.5% on homes over $1,000,000. We're based in Schaumburg, Illinois, but the listing itself goes on your local MLS and out to the major sites either way. Leave your email in the form on this page and we'll confirm the listing details for your market before you sign.</p>
           </details>
           <details>
             <summary>What happens after I fill out the form?</summary>
-            <p>The form asks for just one thing — your mobile number. Tap send and it comes straight to us from this page; nothing opens your email app and there's no second step. We'll text you back to walk through your price, the buyer's agent commission you'd offer, and the listing agreement.</p>
+            <p>The form asks for just one thing — your email address. Tap send and it comes straight to us from this page; nothing opens your email app and there's no second step. We'll email you back to walk through your price, the buyer's agent commission you'd offer, and the listing agreement.</p>
           </details>
         </div>
       </section>
@@ -661,19 +661,19 @@
       <section aria-labelledby="form-heading" id="contact-form">
         <h2 id="form-heading">Thinking about listing? Start here.</h2>
         <p class="section-sub">
-          One thing only — your mobile number. Type it, tap send, and it comes straight to us
-          right here on this page. No email app, no second step. We'll text you back about
+          One thing only — your email address. Type it, tap send, and it comes straight to us
+          right here on this page. No email app, no second step. We'll email you back about
           listing your home for 1%.
         </p>
         <form class="form-card" id="listingForm" novalidate>
           <div class="f-field">
-            <label for="fPhone">Your mobile number <span class="req" aria-hidden="true">*</span></label>
-            <input id="fPhone" name="phone" type="tel" autocomplete="tel" required placeholder="(555) 555-5555" />
+            <label for="fEmail">Your email address <span class="req" aria-hidden="true">*</span></label>
+            <input id="fEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
           </div>
           <div class="form-actions">
-            <button class="btn btn-primary" type="submit" id="sendLeadBtn">Send — text me back</button>
+            <button class="btn btn-primary" type="submit" id="sendLeadBtn">Send — email me back</button>
           </div>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite">That's all we ask. One tap and it's sent — we'll text you back.</p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite">That's all we ask. One tap and it's sent — we'll email you back.</p>
         </form>
       </section>
 
@@ -800,22 +800,22 @@
         var sendBtn = document.getElementById('sendLeadBtn');
         form.addEventListener('submit', function (e) {
           e.preventDefault();
-          var phone = String(document.getElementById('fPhone').value || '').trim();
-          var digits = phone.replace(/\D/g, '');
-          if (digits.length < 10) {
-            statusEl.innerHTML = '<span class="err">That number looks short</span> — please enter your full mobile number with area code.';
-            document.getElementById('fPhone').focus();
+          var email = String(document.getElementById('fEmail').value || '').trim();
+          if (!/^\S+@\S+\.\S+$/.test(email)) {
+            statusEl.innerHTML = '<span class="err">That email looks off</span> — please enter your full email address.';
+            document.getElementById('fEmail').focus();
             return;
           }
           sendBtn.disabled = true;
-          sendBtn.textContent = 'Sending…';
-          statusEl.textContent = 'Sending…';
+          sendBtn.textContent = 'Sending\u2026';
+          statusEl.textContent = 'Sending\u2026';
           fetch('https://formsubmit.co/ajax/dan@valleypointholding.com', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify({
               _subject: 'New 1% listing lead',
-              phone: phone,
+              email: email,
+              _replyto: email,
               _template: 'table',
               _captcha: 'true'
             })
@@ -824,11 +824,11 @@
             return r.json();
           }).then(function () {
             form.reset();
-            sendBtn.textContent = 'Sent ✓';
-            statusEl.innerHTML = '<strong>Got it.</strong> Your number is in — we\'ll text you back shortly about listing for 1%.';
+            sendBtn.textContent = 'Sent \u2713';
+            statusEl.innerHTML = '<strong>Got it.</strong> Your email is in — we\'ll email you back shortly about listing for 1%.';
           }).catch(function () {
             sendBtn.disabled = false;
-            sendBtn.textContent = 'Send — text me back';
+            sendBtn.textContent = 'Send — email me back';
             statusEl.innerHTML = '<span class="err">Something went wrong sending that.</span> Please try again, or just text us at (779) 800-9303.';
           });
         });
