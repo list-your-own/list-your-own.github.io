@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Tell List Your Own everything about your home in one form — your details, the property, and your photos — and we'll get your 1% MLS listing started. Listing-only, nationwide." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJMaXN0IFlvdXIgT3duIGxvZ28gbWFyayI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Imx5by1iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDQ1MmEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGEyZTFiIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHJ4PSIyMiIgZmlsbD0idXJsKCNseW8tYmcpIi8+CiAgPHJlY3QgeD0iNi41IiB5PSI2LjUiIHdpZHRoPSI4MyIgaGVpZ2h0PSI4MyIgcng9IjE3IiBmaWxsPSJub25lIiBzdHJva2U9IiNkOWIzNmEiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1IiBzdHJva2Utd2lkdGg9IjEuNCIvPgogIDxwYXRoIGQ9Ik00OCAyNS41IDcxIDQ1LjVoLTZWNjlIMzFWNDUuNWgtNloiIGZpbGw9IiNmZmZmZmYiLz4KICA8cGF0aCBkPSJNMjcuNSA0NC41IDQ4IDI3LjVsMjAuNSAxNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDliMzZhIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik00Mi41IDY5di0xM2E1LjUgNS41IDAgMCAxIDExIDB2MTNaIiBmaWxsPSIjMGEyZTFiIi8+CiAgPGNpcmNsZSBjeD0iNTAuNiIgY3k9IjYxLjUiIHI9IjEuMyIgZmlsbD0iI2Q5YjM2YSIvPgogIDxyZWN0IHg9IjI3IiB5PSI3My41IiB3aWR0aD0iNDIiIGhlaWdodD0iMy4yIiByeD0iMS42IiBmaWxsPSIjZDliMzZhIi8+Cjwvc3ZnPgo=" />
+    <title>List Your Own — Tell us about your home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,900&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f7f6f2;
+        --surface: #ffffff;
+        --surface-2: #eef0ea;
+        --ink: #1c2420;
+        --ink-soft: #4a554e;
+        --line: #d9dcd2;
+        --brand: #14532d;
+        --brand-deep: #0d3b21;
+        --brand-ink: #ffffff;
+        --accent: #b07d2b;
+        --accent-soft: #f3e8d2;
+        --warn-bg: #fdf3e0;
+        --warn-line: #e3c98f;
+        --warn-ink: #5c4510;
+        --good: #14532d;
+        --shadow: 0 10px 30px rgba(20, 35, 25, 0.12);
+        --radius: 14px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #121714;
+          --surface: #1b211d;
+          --surface-2: #232a25;
+          --ink: #eef1ec;
+          --ink-soft: #aeb8b0;
+          --line: #333c36;
+          --brand: #2e7d46;
+          --brand-deep: #1d5230;
+          --brand-ink: #ffffff;
+          --accent: #d9a94f;
+          --accent-soft: #3a3220;
+          --warn-bg: #332a15;
+          --warn-line: #6b5620;
+          --warn-ink: #ecd9a8;
+          --good: #7bc98f;
+          --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Public Sans", system-ui, -apple-system, sans-serif;
+        font-size: 17px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; display: block; }
+      a { color: var(--brand); }
+      .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+      /* ---------- Masthead (same lockup as index) ---------- */
+      .masthead {
+        display: flex; align-items: center; gap: 14px;
+        padding: 26px 0 20px;
+        border-bottom: 1px solid var(--line);
+      }
+      .masthead .logo-mark {
+        width: 58px; height: 58px; flex: 0 0 58px;
+        filter: drop-shadow(0 3px 8px rgba(20, 35, 25, 0.28));
+      }
+      .masthead .logo-words { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+      .masthead .logo-name {
+        font-family: "Source Serif 4", Georgia, serif;
+        font-weight: 900; font-size: 25px; line-height: 1.05;
+        letter-spacing: 0.015em; color: var(--ink); white-space: nowrap;
+      }
+      .masthead .logo-name .dot { color: var(--accent); }
+      .masthead .logo-rule { width: 118px; height: 2.5px; background: var(--accent); border-radius: 2px; }
+      .masthead .logo-tag {
+        font-size: 10.5px; font-weight: 700;
+        letter-spacing: 0.24em; text-transform: uppercase;
+        color: var(--ink-soft); white-space: nowrap;
+      }
+      .masthead .masthead-phone {
+        margin-left: auto; flex: 0 0 auto;
+        font-weight: 800; font-size: 16px; color: var(--brand);
+        text-decoration: none; white-space: nowrap;
+      }
+      .masthead .masthead-phone:hover { text-decoration: underline; }
+
+      /* ---------- Headings / buttons (same as index) ---------- */
+      h1 {
+        font-family: "Source Serif 4", Georgia, serif;
+        font-weight: 900;
+        font-size: clamp(34px, 6vw, 52px);
+        line-height: 1.05; letter-spacing: -0.01em;
+        margin: 34px 0 10px;
+      }
+      h1 .pct { color: var(--brand); white-space: nowrap; }
+      .lede {
+        font-size: clamp(17px, 2.4vw, 20px);
+        color: var(--ink-soft);
+        max-width: 62ch;
+        margin: 0 0 28px;
+      }
+      .lede strong { color: var(--ink); }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+        min-height: 52px; padding: 13px 24px;
+        border-radius: 10px; border: 2px solid transparent;
+        font-weight: 700; font-size: 17px; text-decoration: none;
+        cursor: pointer; font-family: inherit;
+      }
+      .btn-primary { background: var(--brand); color: var(--brand-ink); }
+      .btn-primary:hover { background: var(--brand-deep); }
+      .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+      .btn-ghost:hover { border-color: var(--ink-soft); }
+
+      /* ---------- Form (same classes as index) ---------- */
+      .form-card {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--radius); padding: 28px;
+        box-shadow: var(--shadow);
+      }
+      .form-card h3 {
+        font-family: "Source Serif 4", Georgia, serif;
+        font-weight: 900; font-size: 23px; line-height: 1.15;
+        margin: 30px 0 4px;
+      }
+      .form-card h3:first-of-type { margin-top: 2px; }
+      .form-card .group-sub { color: var(--ink-soft); font-size: 15px; margin: 0 0 16px; }
+      .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+      .form-grid .full { grid-column: 1 / -1; }
+      .f-field label { display: block; font-weight: 700; font-size: 14.5px; margin-bottom: 7px; }
+      .f-field label .req { color: var(--accent); }
+      .f-field label .opt { font-weight: 500; color: var(--ink-soft); font-size: 13px; }
+      .f-field input, .f-field select, .f-field textarea {
+        width: 100%; min-height: 52px;
+        border: 1.5px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink);
+        font: inherit; font-size: 16.5px; padding: 11px 13px;
+      }
+      .f-field textarea { min-height: 130px; resize: vertical; }
+      .f-field input[type="file"] { padding: 13px; }
+      .f-field input:focus, .f-field select:focus, .f-field textarea:focus {
+        outline: 2px solid var(--brand); outline-offset: 1px; border-color: var(--brand);
+      }
+      .f-field .hint { font-weight: 400; color: var(--ink-soft); font-size: 13.5px; margin-top: 6px; }
+      .consent {
+        display: flex; gap: 11px; align-items: flex-start;
+        margin-top: 24px; font-size: 15px; color: var(--ink-soft);
+      }
+      .consent input { width: 21px; height: 21px; flex: 0 0 21px; margin-top: 2px; accent-color: var(--brand); }
+      .form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+      .form-actions .btn { flex: 1 1 220px; }
+      .form-status { margin: 16px 0 0; font-size: 15px; color: var(--ink-soft); }
+      .form-fineprint { margin: 18px 0 0; font-size: 13.5px; color: var(--ink-soft); max-width: 78ch; }
+
+      footer { padding: 40px 0 60px; color: var(--ink-soft); font-size: 14px; }
+      footer .fineprint { max-width: 78ch; display: grid; gap: 8px; }
+      footer p { margin: 0; }
+
+      @media (max-width: 760px) {
+        .form-grid { grid-template-columns: 1fr; }
+        .form-card { padding: 22px 18px; }
+        .masthead { gap: 11px; padding: 20px 0 16px; }
+        .masthead .logo-mark { width: 48px; height: 48px; flex-basis: 48px; }
+        .masthead .logo-name { font-size: 20px; }
+        .masthead .logo-tag { font-size: 9px; letter-spacing: 0.18em; }
+        .masthead .masthead-phone { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="masthead">
+        <img class="logo-mark" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJMaXN0IFlvdXIgT3duIGxvZ28gbWFyayI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Imx5by1iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDQ1MmEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGEyZTFiIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHJ4PSIyMiIgZmlsbD0idXJsKCNseW8tYmcpIi8+CiAgPHJlY3QgeD0iNi41IiB5PSI2LjUiIHdpZHRoPSI4MyIgaGVpZ2h0PSI4MyIgcng9IjE3IiBmaWxsPSJub25lIiBzdHJva2U9IiNkOWIzNmEiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1IiBzdHJva2Utd2lkdGg9IjEuNCIvPgogIDxwYXRoIGQ9Ik00OCAyNS41IDcxIDQ1LjVoLTZWNjlIMzFWNDUuNWgtNloiIGZpbGw9IiNmZmZmZmYiLz4KICA8cGF0aCBkPSJNMjcuNSA0NC41IDQ4IDI3LjVsMjAuNSAxNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDliMzZhIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik00Mi41IDY5di0xM2E1LjUgNS41IDAgMCAxIDExIDB2MTNaIiBmaWxsPSIjMGEyZTFiIi8+CiAgPGNpcmNsZSBjeD0iNTAuNiIgY3k9IjYxLjUiIHI9IjEuMyIgZmlsbD0iI2Q5YjM2YSIvPgogIDxyZWN0IHg9IjI3IiB5PSI3My41IiB3aWR0aD0iNDIiIGhlaWdodD0iMy4yIiByeD0iMS42IiBmaWxsPSIjZDliMzZhIi8+Cjwvc3ZnPgo=" alt="List Your Own logo" width="58" height="58" />
+        <div class="logo-words">
+          <span class="logo-name">List Your Own<span class="dot">.</span></span>
+          <span class="logo-rule"></span>
+          <span class="logo-tag">List for 1% · Nationwide MLS</span>
+        </div>
+        <a class="masthead-phone" href="tel:+17798009303">(779) 800-9303</a>
+      </header>
+
+      <main>
+        <h1>Tell us about your home.</h1>
+        <p class="lede">
+          This is the full intake — everything we need to build your listing, in one go.
+          List Your Own lists your home on the MLS for <strong>1% on homes up to $1,000,000
+          (1.5% over $1,000,000)</strong>, listing-only, anywhere in the U.S. Fill it out,
+          attach your photos, and we'll email you back to confirm the details and get your
+          listing agreement ready.
+        </p>
+
+        <form class="form-card" id="intakeForm"
+              action="https://formsubmit.co/dan@valleypointholding.com"
+              method="POST" enctype="multipart/form-data">
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New List Your Own FULL listing intake" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_next" value="https://list-your-own.github.io/thanks.html" />
+          <input type="hidden" name="_replyto" id="replyTo" value="" />
+
+          <h3>Your details</h3>
+          <p class="group-sub">So we can email you back and walk through your listing.</p>
+          <div class="form-grid">
+            <div class="f-field">
+              <label for="fName">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input id="fName" name="Full Name" type="text" autocomplete="name" required placeholder="Your full name" />
+            </div>
+            <div class="f-field">
+              <label for="fEmail">Email address <span class="req" aria-hidden="true">*</span></label>
+              <input id="fEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+            </div>
+            <div class="f-field full">
+              <label for="fPhone">Phone <span class="req" aria-hidden="true">*</span></label>
+              <input id="fPhone" name="Phone" type="tel" autocomplete="tel" required placeholder="(555) 555-5555" />
+            </div>
+          </div>
+
+          <h3>The property</h3>
+          <p class="group-sub">The same details that go into the MLS listing itself.</p>
+          <div class="form-grid">
+            <div class="f-field full">
+              <label for="fAddress">Street address <span class="req" aria-hidden="true">*</span></label>
+              <input id="fAddress" name="Property Street Address" type="text" autocomplete="street-address" required placeholder="123 Main St" />
+            </div>
+            <div class="f-field">
+              <label for="fCity">City <span class="req" aria-hidden="true">*</span></label>
+              <input id="fCity" name="City" type="text" autocomplete="address-level2" required />
+            </div>
+            <div class="f-field">
+              <label for="fState">State <span class="req" aria-hidden="true">*</span></label>
+              <select id="fState" name="State" required>
+                <option value="">Select a state…</option>
+                <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option>
+                <option>CO</option><option>CT</option><option>DE</option><option>DC</option><option>FL</option>
+                <option>GA</option><option>HI</option><option>ID</option><option>IL</option><option>IN</option>
+                <option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option>
+                <option>MD</option><option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+                <option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option>
+                <option>NJ</option><option>NM</option><option>NY</option><option>NC</option><option>ND</option>
+                <option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option>
+                <option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+                <option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option>
+                <option>WY</option>
+              </select>
+            </div>
+            <div class="f-field">
+              <label for="fZip">ZIP code <span class="req" aria-hidden="true">*</span></label>
+              <input id="fZip" name="ZIP Code" type="text" inputmode="numeric" autocomplete="postal-code" required placeholder="00000" />
+            </div>
+            <div class="f-field">
+              <label for="fType">Property type <span class="req" aria-hidden="true">*</span></label>
+              <select id="fType" name="Property Type" required>
+                <option value="">Select a type…</option>
+                <option>Single family</option>
+                <option>Condo</option>
+                <option>Townhouse</option>
+                <option>Multi-family</option>
+                <option>Land</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="f-field">
+              <label for="fPrice">Asking price <span class="req" aria-hidden="true">*</span></label>
+              <input id="fPrice" name="Asking Price" type="number" min="0" step="1000" inputmode="numeric" required placeholder="500000" />
+            </div>
+            <div class="f-field">
+              <label for="fBeds">Bedrooms <span class="req" aria-hidden="true">*</span></label>
+              <input id="fBeds" name="Bedrooms" type="number" min="0" step="1" inputmode="numeric" required placeholder="3" />
+            </div>
+            <div class="f-field">
+              <label for="fBaths">Bathrooms <span class="req" aria-hidden="true">*</span></label>
+              <input id="fBaths" name="Bathrooms" type="number" min="0" step="0.5" inputmode="decimal" required placeholder="2" />
+            </div>
+            <div class="f-field">
+              <label for="fSqft">Living area <span class="opt">(sq ft, if known)</span></label>
+              <input id="fSqft" name="Living Area (sq ft)" type="number" min="0" step="1" inputmode="numeric" placeholder="1,800" />
+            </div>
+            <div class="f-field">
+              <label for="fLot">Lot size <span class="opt">(acres or sq ft, if known)</span></label>
+              <input id="fLot" name="Lot Size" type="text" placeholder="0.25 acres" />
+            </div>
+            <div class="f-field">
+              <label for="fYear">Year built <span class="opt">(if known)</span></label>
+              <input id="fYear" name="Year Built" type="number" min="1600" max="2100" step="1" inputmode="numeric" placeholder="1998" />
+            </div>
+            <div class="f-field">
+              <label for="fGarage">Garage / parking</label>
+              <select id="fGarage" name="Garage / Parking">
+                <option value="">Select…</option>
+                <option>None</option>
+                <option>1-car garage</option>
+                <option>2-car garage</option>
+                <option>3+ car garage</option>
+                <option>Driveway only</option>
+                <option>Carport</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="f-field">
+              <label for="fHoa">HOA?</label>
+              <select id="fHoa" name="HOA">
+                <option value="">Select…</option>
+                <option>No HOA</option>
+                <option>Yes — has an HOA</option>
+              </select>
+            </div>
+            <div class="f-field">
+              <label for="fHoaAmt">HOA amount <span class="opt">(if yes — per month or year)</span></label>
+              <input id="fHoaAmt" name="HOA Amount" type="text" placeholder="$250 / month" />
+            </div>
+            <div class="f-field">
+              <label for="fBasement">Basement</label>
+              <select id="fBasement" name="Basement">
+                <option value="">Select…</option>
+                <option>None</option>
+                <option>Unfinished</option>
+                <option>Partially finished</option>
+                <option>Fully finished</option>
+                <option>Walkout</option>
+              </select>
+            </div>
+            <div class="f-field">
+              <label for="fHeating">Heating</label>
+              <select id="fHeating" name="Heating">
+                <option value="">Select…</option>
+                <option>Forced air (gas)</option>
+                <option>Forced air (electric)</option>
+                <option>Heat pump</option>
+                <option>Radiator / boiler</option>
+                <option>Baseboard</option>
+                <option>Other / not sure</option>
+              </select>
+            </div>
+            <div class="f-field">
+              <label for="fCooling">Cooling</label>
+              <select id="fCooling" name="Cooling">
+                <option value="">Select…</option>
+                <option>Central A/C</option>
+                <option>Heat pump</option>
+                <option>Window units</option>
+                <option>None</option>
+                <option>Other / not sure</option>
+              </select>
+            </div>
+          </div>
+
+          <h3>Description &amp; features</h3>
+          <p class="group-sub">Upgrades, features, condition — anything buyers should know. This becomes the heart of your listing description.</p>
+          <div class="form-grid">
+            <div class="f-field full">
+              <label for="fDesc">About your home</label>
+              <textarea id="fDesc" name="Home Description / Features" placeholder="e.g. Updated kitchen with quartz counters (2023), new roof (2022), finished basement, fenced yard, walk to schools…"></textarea>
+            </div>
+            <div class="f-field full">
+              <label for="fTimeline">When do you want to go live?</label>
+              <select id="fTimeline" name="Timeline to Go Live">
+                <option value="">Select…</option>
+                <option>ASAP</option>
+                <option>2–4 weeks</option>
+                <option>1–3 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+          </div>
+
+          <h3>Photos</h3>
+          <p class="group-sub">Attach your home photos right here — exterior, kitchen, living areas, bedrooms, bathrooms, yard.</p>
+          <div class="form-grid">
+            <div class="f-field full">
+              <label for="fPhotos">Upload photos <span class="opt">(you can pick several at once)</span></label>
+              <input id="fPhotos" name="attachment" type="file" accept="image/*" multiple />
+              <p class="hint">You can also email or text photos later to (779) 800-9303 if that's easier.</p>
+            </div>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="Consent to Contact" value="Yes — seller agreed to be contacted by email, phone, and text about their listing" required />
+            <span>Yes — contact me by email, phone, and text about listing my home with List Your Own. <span class="req" aria-hidden="true">*</span></span>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Send my listing details</button>
+            <a class="btn btn-ghost" href="tel:+17798009303">Call (779) 800-9303</a>
+          </div>
+          <p class="form-status">Submitting sends everything above — photos included — straight to us. We'll email you back to confirm and get your listing agreement ready.</p>
+
+          <p class="form-fineprint">
+            List Your Own is a listing-only (limited-service) MLS listing service, nationwide. The listing fee is
+            1% on homes priced up to $1,000,000 and 1.5% on homes priced over $1,000,000, calculated on the final
+            sale price, and covers the listing only. If a buyer's agent brings the buyer, you still pay that buyer's
+            agent's commission separately, at the amount you choose to offer — it is not included in the listing fee.
+            All commissions are negotiable. Nothing is charged and no listing goes live until the terms are confirmed
+            in a written listing agreement.
+          </p>
+        </form>
+
+        <p class="form-status" style="margin-top:22px;">
+          Rather start smaller? Go back to the <a href="index.html">quick email form</a> — or call or text
+          <a href="tel:+17798009303">(779) 800-9303</a>.
+        </p>
+      </main>
+
+      <footer>
+        <div class="fineprint">
+          <p><strong>List Your Own</strong> · 450 W Schaumburg Rd, Schaumburg, IL 60195 · (779) 800-9303 · Listing nationwide — 1% on homes up to $1,000,000, 1.5% over $1,000,000</p>
+          <p>
+            The listing fee — 1% on homes priced up to $1,000,000 and 1.5% on homes priced over $1,000,000, calculated on the final sale price — is a listing-side, limited-service (listing-only) commission. It does not include
+            compensation to a buyer's brokerage or agent, which the seller offers separately and pays at
+            closing if a buyer's agent is involved. All commissions are negotiable; there is no standard
+            or set commission rate. Terms are confirmed in a written listing agreement before your home is listed.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // FormSubmit: make replies go straight to the seller by mirroring the
+      // email field into _replyto right before the form posts.
+      document.getElementById('intakeForm').addEventListener('submit', function () {
+        var email = document.getElementById('fEmail').value.trim();
+        document.getElementById('replyTo').value = email;
+      });
+    </script>
+  </body>
+</html>
